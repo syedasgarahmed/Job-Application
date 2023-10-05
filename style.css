@@ -9,11 +9,12 @@ color: red;
 }
 
 body {
-  background-color: #ccc;
+  background-color: #f1f1f1;
 }
 .container {
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
 }
 
 .apply_box {
@@ -87,8 +88,73 @@ button:hover {
   width: 100%;
 }
 
+img{
+  width: 50%;
+  height: 50%;
+  margin: auto -50px;
+  border-radius: 50px;
+  box-shadow: 12px 9px 8px 6px black;
+}
+
 @media (max-width: 460px) {
   .textarea_control {
     grid-column: 1 / span 1;
   }
+
+  img{
+    display: none;
+  }
 } ;
+
+
+@media screen and (max-width: 800px) {
+  .container{
+    width: 100%;
+    padding: 7%;
+  }
+
+  img{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .container{
+    width: 100%;
+    padding: 3%;
+    overflow-x: hidden;
+  }
+
+  img{
+    display: none;
+  }
+  .apply_box{
+    overflow-x: hidden;
+    box-shadow: 5px 3px 8px 5px rgb(76, 75, 75);
+  }
+
+  input{
+    width: fit-content;
+  }
+
+  .error{
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    max-width: 900px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  img{
+    width: 40%;
+    height: 50%;
+    margin: auto -50px;
+    border-radius: 50px;
+    box-shadow: 12px 9px 8px 6px black;
+  }
+}
